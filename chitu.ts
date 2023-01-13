@@ -14,15 +14,15 @@
 
 const MOTER_ADDRESSS = 0x10
 
-enum PingUnit {
-    //% block="cm"
-    Centimeters,
-}
+
 enum state {
         state1=0x10,
         state2=0x11,
         state3=0x20,
-        state4=0x21
+        state4=0x21,
+        state5=0x30,
+        state6=0x31
+        
     }
 interface KV {
     key: state;
