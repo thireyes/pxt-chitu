@@ -1,21 +1,19 @@
 {
-    "name": "pxt-chitu",
-    "version": "0.0.0",
-    "description": "",
+    "name": "chitu",
+    "Version": "v0.0.1"
+    "description": "A micro:bit extension for Intelligent Vehicle: Chitu",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
+        "chitu.ts",
         "README.md",
-        "main.blocks",
-        "main.ts"
+        "_locales/zh-cn/maqueen-strings.json",
+        "_locales/es/maqueen-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
-    "public": true,
     "targetVersions": {
         "target": "5.0.12",
         "targetId": "microbit"
