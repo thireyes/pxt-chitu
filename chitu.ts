@@ -29,7 +29,7 @@ interface KV {
     action: Action;
 }
 
-//% weight=100 color=#008B00 icon="\uf441" block="ChiTu"
+//% weight=100 color=#CB2D1D icon="\uf441" block="ChiTu"
 //% groups=['micro:bit(v2)']
 namespace chitu {
     let kbCallback: KV[] = []
