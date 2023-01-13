@@ -11,14 +11,6 @@
  * @date  2023-01-12
 */
 
-/* wx
-let maqueencb: Action
-let maqueenmycb: Action
-let maqueene = "1"
-let maqueenparam = 0
-let alreadyInit = 0
-let IrPressEvent = 0
-wx*/
 
 const MOTER_ADDRESSS = 0x10
 
