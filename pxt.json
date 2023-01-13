@@ -1,6 +1,6 @@
 {
     "name": "chitu",
-    "Version": "v0.0.1"
+    "Version": "v0.0.1",
     "description": "A micro:bit extension for Intelligent Vehicle: Chitu",
     "dependencies": {
         "core": "*"
@@ -8,8 +8,8 @@
     "files": [
         "chitu.ts",
         "README.md",
-        "_locales/zh-cn/maqueen-strings.json",
-        "_locales/es/maqueen-strings.json"
+        "_locales/zh-cn/chitu-strings.json",
+        "_locales/en/chitu-strings.json"
     ],
     "testFiles": [
         "test.ts"
