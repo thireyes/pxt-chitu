@@ -29,7 +29,7 @@ interface KV {
     action: Action;
 }
 
-//% weight=100 color=#008B00 icon="\uf7ab" block="ChiTu"
+//% weight=100 color=#008B00 icon="\uf441" block="ChiTu"
 //% groups=['micro:bit(v2)']
 namespace chitu {
     let kbCallback: KV[] = []
@@ -73,6 +73,8 @@ namespace chitu {
         PatrolLeft = 0x10,
         //% blockId="patrolRight" block="right"
         PatrolRight = 0x20
+        //% blockId="patrolMiddle" block="middle"
+        PatrolMiddle = 0x30
     }
     export enum Voltage {
         //%block="high"
@@ -96,90 +98,6 @@ namespace chitu {
     }
 
 
-    
-
-   
-
-
-   
-    /**
-     * Read the version number.
-     */
-/*wx
-    //% weight=10
-    //% blockId=IR_read_version block="get product information"
-    export function IR_read_version(): string {
-        pins.i2cWriteNumber(0x10, 50, NumberFormat.UInt8BE);
-        let dataLen = pins.i2cReadNumber(0x10, NumberFormat.UInt8BE);
-        pins.i2cWriteNumber(0x10, 51, NumberFormat.UInt8BE);
-        let buf = pins.i2cReadBuffer(0x10, dataLen, false);
-        let version = "";
-        for (let index = 0; index < dataLen; index++) {
-            version += String.fromCharCode(buf[index])
-        }
-        return version
-    }
-wx*/
-
-
-    /**
-     * Read ultrasonic sensor.
-     */
-/*wx
-    let state1 = 0;
-    //% blockId=ultrasonic_sensor block="read ultrasonic sensor |%unit "
-    //% weight=95
-    export function Ultrasonic(unit: PingUnit, maxCmDistance = 500): number {
-        let data;
-        let i = 0;
-        data = readUlt(unit);
-        if(state1  == 1 && data != 0){
-            state1 =0;
-        }
-        if(data != 0){
-        }else{
-            if(state1 == 0){
-                do{
-                    data = readUlt(unit);
-                    i++;
-                    if(i > 3){
-                        state1 =1;
-                        data =500;
-                        break;
-                        }
-                }while(data == 0)
-            }
-        }
-        if(data == 0)
-            data = 500
-        return data;
-
-    }
-    function readUlt(unit:number):number{
-        let d
-        pins.digitalWritePin(DigitalPin.P1, 1);
-        basic.pause(1)
-        pins.digitalWritePin(DigitalPin.P1, 0);
-        if (pins.digitalReadPin(DigitalPin.P2) == 0) {
-            pins.digitalWritePin(DigitalPin.P1, 0);
-            pins.digitalWritePin(DigitalPin.P1, 1);
-            basic.pause(20)
-            pins.digitalWritePin(DigitalPin.P1, 0);
-            d = pins.pulseIn(DigitalPin.P2, PulseValue.High, 500 * 58);//readPulseIn(1);
-        } else {
-            pins.digitalWritePin(DigitalPin.P1, 1);
-            pins.digitalWritePin(DigitalPin.P1, 0);
-            basic.pause(20)
-            pins.digitalWritePin(DigitalPin.P1, 0);
-            d = pins.pulseIn(DigitalPin.P2, PulseValue.Low, 500 * 58);//readPulseIn(0);
-        }
-        let x = d / 59;
-        switch (unit) {
-            case PingUnit.Centimeters: return Math.round(x);
-            default: return Math.idiv(d, 2.54);
-        }
-    }
-wx*/
     
     /**
      * Set the direction and speed of Chitu motor.
@@ -259,6 +177,8 @@ wx*/
             return pins.digitalReadPin(DigitalPin.P13)
         } else if (patrol == Patrol.PatrolRight) {
             return pins.digitalReadPin(DigitalPin.P14)
+        } else if (patrol == Patrol.PatrolMiddle) {
+            return pins.digitalReadPin(DigitalPin.P0)
         } else {
             return -1
         }
@@ -320,11 +240,13 @@ wx*/
         switch(i){
             case 1: x = pins.digitalReadPin(DigitalPin.P13) == 0 ? 0x10:0;break;
             case 2: x = pins.digitalReadPin(DigitalPin.P13) == 1 ? 0x11:0;break;
-            case 3: x = pins.digitalReadPin(DigitalPin.P14) == 0 ? 0x20:0;break;
+            case 3: x = pins.digitalReadPin(DigitalPin.P14) == 0 ? 0x20 : 0; break;
+            case 4: x = pins.digitalReadPin(DigitalPin.P0) == 0 ? 0x10:0;break;
+            case 5: x = pins.digitalReadPin(DigitalPin.P0) == 1 ? 0x11:0;break;
             default:x = pins.digitalReadPin(DigitalPin.P14) == 1 ? 0x21:0;break;
         }
         i+=1;
-        if(i==5)i=1;
+        if(i==7)i=1;
         
         return x;
     }
