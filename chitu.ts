@@ -242,9 +242,9 @@ namespace chitu {
         switch(i){
             case 1: x = pins.digitalReadPin(DigitalPin.P13) == 0 ? 0x10:0;break;
             case 2: x = pins.digitalReadPin(DigitalPin.P13) == 1 ? 0x11:0;break;
-            case 3: x = pins.digitalReadPin(DigitalPin.P14) == 0 ? 0x20 : 0; break;
-            case 4: x = pins.digitalReadPin(DigitalPin.P0) == 0 ? 0x10:0;break;
-            case 5: x = pins.digitalReadPin(DigitalPin.P0) == 1 ? 0x11:0;break;
+            case 3: x = pins.digitalReadPin(DigitalPin.P14) == 0 ? 0x20:0;break;
+            case 4: x = pins.digitalReadPin(DigitalPin.P0) == 0 ? 0x30:0;break;
+            case 5: x = pins.digitalReadPin(DigitalPin.P0) == 1 ? 0x31:0;break;
             default:x = pins.digitalReadPin(DigitalPin.P14) == 1 ? 0x21:0;break;
         }
         i+=1;
