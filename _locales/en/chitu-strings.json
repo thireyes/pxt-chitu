@@ -18,7 +18,8 @@
     "chitu.Motors.All|block": "All",
     "chitu.Patrol1.PatrolLeft|block":"Left",
     "chitu.Patrol1.PatrolRight|block":"Right",
+    "chitu.Patrol1.PatrolMiddle|block":"Middle",
     "chitu.Voltage.High|block":"High",
     "chitu.Voltage.Low|block":"Lwo",
-    "chitu.ltEvent|block":"While|%valuePatrolSensor|%vi"
+    "chitu.ltEvent|block":"On|%valuePatrolSensor|%vi"
 }
