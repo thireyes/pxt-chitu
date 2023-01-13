@@ -65,7 +65,9 @@ namespace chitu {
         //% blockId="patrolLeft" block="left"
         PatrolLeft = 13,
         //% blockId="patrolRight" block="right"
-        PatrolRight = 14
+        PatrolRight = 14,
+        //% blockId="patrolMiddle" block="middle"
+        PatrolMiddle = 0
     }
 
     export enum Patrol1 {
