@@ -72,7 +72,7 @@ namespace chitu {
         //% blockId="patrolLeft" block="left"
         PatrolLeft = 0x10,
         //% blockId="patrolRight" block="right"
-        PatrolRight = 0x20
+        PatrolRight = 0x20,
         //% blockId="patrolMiddle" block="middle"
         PatrolMiddle = 0x30
     }
