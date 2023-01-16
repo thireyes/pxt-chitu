@@ -1,31 +1,54 @@
 
-> 在 [https://thireyes.github.io/pxt-chitu/](https://thireyes.github.io/pxt-chitu/) 打开此页面
+# ChiTu : Intelligent Car
 
-## 用作扩展
+A MakeCode entensions for programming educational intelligent car.
 
-此仓库可以作为 **插件** 添加到 MakeCode 中。
+## Basic usage
 
-* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 点击 **新项目**
-* 点击齿轮图标菜单下的 **扩展**
-* 搜索 **https://github.com/thireyes/pxt-chitu** 并导入
+* Control the direction and speed of Chitu motor
 
-## 编辑此项目 ![构建状态标志](https://github.com/thireyes/pxt-chitu/workflows/MakeCode/badge.svg)
+```blocks
+ chitu.motorRun(chitu.Motors.M1, chitu.Dir.CW, 150)
+ chitu.motorRun(chitu.Motors.M2, chitu.Dir.CCW, 150)
+```
 
-在 MakeCode 中编辑此仓库。
+* Stop the Chitu motor
 
-* 打开 [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* 点击 **导入**，然后点击 **导入 URL**
-* 粘贴 **https://github.com/thireyes/pxt-chitu** 并点击导入
+```blocks
+chitu.motorStop(chitu,Motors.M1)
+```
 
-## 积木块预览
+* Set the Chitu servos
 
-此图像显示主分支中最后一次提交的块代码。
-此图像可能需要几分钟才能刷新。
+```blocks
+chitu.servoRun(chitu.Servos.S1, 90)
+chitu.servoRun(chitu.Servos.S2, 120)
+```
 
-![块的渲染视图](https://github.com/thireyes/pxt-chitu/raw/master/.github/makecode/blocks.png)
+* Read line tracking sensor
 
-#### 元数据（用于搜索、渲染）
+```blocks
+serial.writeNumber(chitu.readPatrol(chitu.Patrol.PatrolLeft))
+serial.writeNumber(chitu.readPatrol(chitu.Patrol.PatrolMiddle))
+serial.writeNumber(chitu.readPatrol(chitu.Patrol.PatrolRight))
+```
+
+* Turn on/off the LEDs
+
+```blocks
+chitu.writeLED(chitu.LED.LEDLeft, chitu.LEDswitch.turnOn)
+chitu.writeLED(chitu.LED.LEDRight, chitu.LEDswitch.turnOn)
+```
+
+## License
+
+MIT
+
+## Supported targets
 
 * for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+
+
+## Footnotes
+
+1.  More information about PPW intelligent electronic building blocks https://www.yuque.com/ppwdocs
