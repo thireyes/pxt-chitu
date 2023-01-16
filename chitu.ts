@@ -7,7 +7,7 @@
  * @copyright    [PINPIMWA](http://www.pinpinwa.com), 2023
  * @copyright    MIT Lesser General Public License
  * 
- * @author [email](wangxiao@pinpinwa.cn)
+ * @author [email](info@pinpinwa.cn)
  * @date  2023-01-12
 */
 
