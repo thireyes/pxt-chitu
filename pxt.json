@@ -1,5 +1,5 @@
 {
-    "name": "Chitu",
+    "name": "chitu",
     "Version": "v0.0.1",
     "description": "A micro:bit extension for Intelligent Vehicle: Chitu",
     "dependencies": {
@@ -8,7 +8,7 @@
     "files": [
         "chitu.ts",
         "README.md",
-        "_locales/zh/Chitu-strings.json"
+        "_locales/zh/chitu-strings.json"
     ],
     "testFiles": [
         "test.ts"

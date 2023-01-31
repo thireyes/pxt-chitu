@@ -23,6 +23,4 @@
     "chitu.Voltage.High|block":"高",
     "chitu.Voltage.Low|block":"低",
     "chitu.ltEvent|block":"当|%value巡线传感器|%vi"
-
-
 }
