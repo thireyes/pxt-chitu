@@ -8,8 +8,7 @@
     "files": [
         "chitu.ts",
         "README.md",
-        "_locales/zh-cn/chitu-strings.json",
-        "_locales/en/chitu-strings.json"
+        "_locales/zh-cn/chitu-strings.json"
     ],
     "testFiles": [
         "test.ts"
