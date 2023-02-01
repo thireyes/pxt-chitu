@@ -4,6 +4,7 @@
     "chitu.Motors.M2|block": "右侧",
     "chitu.Patrol.PatrolLeft|block": "左侧",
     "chitu.Patrol.PatrolRight|block": "右侧",
+    "chitu.Patrol.PatrolMiddle|block": "中间",
     "chitu.LEDswitch.turnOn|block": "打开",
     "chitu.LEDswitch.turnOff|block": "关闭",
     "chitu.LED.LEDLeft|block": "左侧",
